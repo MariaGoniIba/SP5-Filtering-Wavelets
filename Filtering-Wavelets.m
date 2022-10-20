@@ -89,6 +89,9 @@ gaussian = exp( -(4*log(2)*wavtime.^2) / fwhm^2 ); % Gaussian
 % Morlet wavelet
 MorletWavelet = csw .* gaussian;
 
+%plot(MorletWavelet)
+%set(gca,'xlim',[5000 7500])
+
 % Manual convolution
 nConv = N + length(wavtime) -1;
 halfw = floor(length(wavtime)/2)+1;
